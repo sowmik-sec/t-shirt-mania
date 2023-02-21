@@ -3,7 +3,7 @@ import Brother from "../Brother/Brother";
 import MySelf from "../MySelf/MySelf";
 import Sister from "../Sister/Sister";
 
-const Father = ({ house, ring }) => {
+const Father = ({ house }) => {
   return (
     <div>
       <h4>Father</h4>
@@ -11,7 +11,7 @@ const Father = ({ house, ring }) => {
         <small>House: {house}</small>
       </p>
       <section className="flex">
-        <MySelf house={house} ring={ring} />
+        <MySelf house={house} />
         <Brother house={house} />
         <Sister house={house} />
       </section>
