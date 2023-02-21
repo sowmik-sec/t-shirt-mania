@@ -8,15 +8,20 @@ const Home = () => {
   const tshirts = useLoaderData();
   const [cart, setCart] = useState([]);
   const handleAddToCart = (tshirt) => {
-    const newCart = [...cart, tshirt];
-    setCart(newCart);
+    const exists = cart.find((ts) => ts._id === tshirt._id);
+    if (!exists) {
+      const newCart = [...cart, tshirt];
+      setCart(newCart);
+    } else {
+      alert("t-shirt already added");
+    }
   };
   return (
     <div className="home-container">
       <div className="t-shirt-container">
         {tshirts.map((tshirt) => (
           <TShirt
-            key={tshirt.id}
+            key={tshirt._id}
             tshirt={tshirt}
             handleAddToCart={handleAddToCart}
           />
