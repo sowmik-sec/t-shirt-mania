@@ -1,9 +1,16 @@
 import React from "react";
+import Friend from "../Friend/Friend";
 
-const Cousin = () => {
+const Cousin = ({ house }) => {
   return (
     <div>
       <h3>Cousin</h3>
+      <p>
+        <small>House: {house}</small>
+      </p>
+      <section>
+        <Friend />
+      </section>
     </div>
   );
 };
