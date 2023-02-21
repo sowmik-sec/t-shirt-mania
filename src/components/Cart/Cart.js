@@ -25,6 +25,11 @@ const Cart = ({ cart, handleRemoveItem }) => {
         </p>
       ))}
       {message}
+      {cart.length === 3 ? <p>Tin jon ke gift diba?</p> : <p>kino kino</p>}
+      <p>and operator</p>
+      {cart.length === 2 && <h2>You selected 2 shirts</h2>}
+      <p>OR Operator</p>
+      {cart.length === 4 || <p>4 TA item na</p>}
     </div>
   );
 };
@@ -33,4 +38,7 @@ export default Cart;
 
 /*
 1. use element and if-else
+2. ternary operation condition ? true:false
+3. && operator (if condition is true, I wanna display something)
+4. || operator (if condition is false, I want to display something)
 */
