@@ -4,6 +4,12 @@
 .blue {
   background-color: blue;
 }
+.yellow {
+  background-color: yellow;
+}
 .purple {
   background-color: purple;
+}
+.bold {
+  font-weight: bold;
 }
